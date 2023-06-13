@@ -1,0 +1,11 @@
+{
+  "NavBarLabels": {
+    "about": "About",
+    "artificialIngredients": "Artificial Ingredients",
+    "fruits": "Fruits",
+    "fungi": "Fungi",
+    "grains": "Grains",
+    "meats": "Meats",
+    "vegetables": "Vegetables"
+  }
+}
