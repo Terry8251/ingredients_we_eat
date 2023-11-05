@@ -1,20 +1,23 @@
-import {useLocale} from 'next-intl';
+import {NextIntlClientProvider} from 'next-intl';
 import {notFound} from 'next/navigation';
 import './globals.css'
-import { Roboto } from '@next/font/google'
+import { Exo } from '@next/font/google'
+import Navbar from '@/components/Navbar/Navbar';
 
-const roboto = Roboto({
+const exo = Exo({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-roboto",
+  variable: "--font-exo"
 })
 
-export default function RootLayout({ children, params }) {
+export function generateStaticParams() {
+  return [{locale: 'en'}, {locale: 'de'}];
+}
 
-  const locale = useLocale();
- 
-  // Show a 404 error if the user requests an unknown locale
-  if (params.locale !== locale) {
+export default async function RootLayout({ children, params: {locale}}) {
+  let messages;
+  try {
+    messages = (await import(`../../messages/${locale}.json`)).default;
+  } catch (error) {
     notFound();
   }
 
@@ -25,8 +28,10 @@ export default function RootLayout({ children, params }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className={`${roboto.variable}`}>
+      <body className={`${exo.variable} font-exo`}>
+      <NextIntlClientProvider locale={locale} messages={messages}>
         {children}
+      </NextIntlClientProvider>
       </body>
     </html>
   )

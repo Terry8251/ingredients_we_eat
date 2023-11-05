@@ -1,12 +1,18 @@
 import Hero from '@/components/Hero/Hero';
-import Navbar from '@/components/Navbar';
+import ItMatters from '@/components/ItMatters/ItMatters';
+import Navbar from '@/components/Navbar/Navbar';
+import WelcomePage from '@/components/WelcomePage/WelcomePage';
+import WholeFoods from '@/components/WholeFoods/index';
 
 export default function Home() {
 
   return (
-      <div className='py-2 relative z-10 bg-gradient-to-b from-[#365b3c] to-[#89e899]'>
+      <div className='z-[2]'>
         <Navbar />
         <Hero />
+        <ItMatters />
+        <WelcomePage /> 
+        <WholeFoods />
       </div>
   )
 }
