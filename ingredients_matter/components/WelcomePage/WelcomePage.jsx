@@ -28,7 +28,7 @@ export default function WelcomePage() {
   return (
     <div className='bg-gradient-to-b from-black via-[#009900] to-[#1721E6]/100 overflow-x-hidden py-28'>
       <motion.div  
-        className='flex font-light flex-col justify-center items-end relative pb-10 text-white text-3xl w-full md:text-4xl lg:text-6xl'
+        className='flex font-black flex-col justify-center items-start relative pb-10 text-white text-3xl w-full md:text-4xl lg:text-7xl'
         ref={ref} 
         style={{
           scale: scaleProgress,
@@ -42,18 +42,11 @@ export default function WelcomePage() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.6 }} 
-        className='relative flex flex-row items-center'
+        className='relative flex flex-col items-center md:justify-between md:flex-row'
       >
-        <motion.div className=' relative w-1/2' variants={slideIn('right', 'tween', 0.2, 1.25)}>
-          <Image
-            src={fruitsVegetables} 
-            alt="fruits_and_veggies_market" 
-            className='m-5 opacity-75 bg-fixed rounded-xl shadow-[60px_px_60px_black]'
-          />
-        </motion.div>
         <motion.div
           variants={slideIn('left', 'tween', 0.2, 1.25)}
-          className='flex relative pl-[166px]'
+          className='flex relative justify-center pb-10 md:pb-0 md:justify-start md:pl-[166px]'
         >
           <Link href={"/About"}>
             <motion.button
@@ -68,9 +61,18 @@ export default function WelcomePage() {
             </motion.button>
           </Link>
         </motion.div>
+        <motion.div className='relative w-full pb-10 md:w-1/2' variants={slideIn('right', 'tween', 0.2, 1.25)}>
+          <Image
+            src={fruitsVegetables} 
+            alt="fruits_and_veggies_market" 
+            width="0"
+            height="0"
+            className='opacity-75 bg-fixed shadow-[60px_px_60px_black] w-full'
+          />
+        </motion.div>
       </motion.div>
       <motion.div 
-        className='flex font-light flex-col justify-center items-end pb-28 pr-10 relative text-white text-3xl w-full md:text-6xl lg:text-7xl'
+        className='flex font-black flex-col justify-center items-end pr-10 relative text-white text-3xl w-full md:text-6xl lg:text-7xl'
         ref={ref} 
         style={{
           scale: scaleProgress,
