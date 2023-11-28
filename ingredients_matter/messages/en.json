@@ -1,14 +1,4 @@
 {
-  "NavBarLabels": {
-    "about": "About",
-    "artificialIngredients": "Artificial Ingredients",
-    "fruits": "Fruits",
-    "fungi": "Fungi",
-    "grains": "Grains",
-    "meats": "Meats",
-    "vegetables": "Vegetables"
-  },
-
   "HeroPage": {
     "main": "Have you ever thought about",
     "secondTitle": "the ingredients we eat?"

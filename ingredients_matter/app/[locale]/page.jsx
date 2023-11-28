@@ -8,7 +8,6 @@ export default function Home() {
 
   return (
       <div className='z-[2]'>
-        <Navbar />
         <Hero />
         <ItMatters />
         <WelcomePage /> 

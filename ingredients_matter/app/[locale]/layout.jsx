@@ -3,6 +3,7 @@ import {notFound} from 'next/navigation';
 import './globals.css'
 import { Exo } from '@next/font/google'
 import Navbar from '@/components/Navbar/Navbar';
+import Footer from '@/components/Footer/Footer';
 
 const exo = Exo({
   subsets: ["latin"],
@@ -29,9 +30,13 @@ export default async function RootLayout({ children, params: {locale}}) {
       */}
       <head />
       <body className={`${exo.variable} font-exo`}>
-      <NextIntlClientProvider locale={locale} messages={messages}>
-        {children}
-      </NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Navbar />
+          <main className='overflow-hidden relative'>
+            {children}
+          </main>
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   )
