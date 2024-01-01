@@ -1,8 +1,8 @@
 import Hero from '@/components/Hero/Hero';
 import ItMatters from '@/components/ItMatters/ItMatters';
-import Navbar from '@/components/Navbar/Navbar';
 import WelcomePage from '@/components/WelcomePage/WelcomePage';
 import WholeFoods from '@/components/WholeFoods/index';
+import FoodiesJourney from './foodiesJourney/page';
 
 export default function Home() {
 

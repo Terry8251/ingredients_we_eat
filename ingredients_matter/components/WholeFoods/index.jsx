@@ -1,9 +1,5 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import { useTranslations } from 'next-intl';
-import styles from '../../styles/index';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { textVariant, slideIn, staggerContainer } from '../../utils/motion';
 import ImageBlock from './ImageBlock';
 
 
@@ -27,7 +23,7 @@ const WholeFoods = () => {
     window.addEventListener('resize', handleResize);
     handleResize();
     return () => {window.removeEventListener('resize', handleResize);};
-  }, []);
+  }, [widthSize]);
 
   return (
     <div

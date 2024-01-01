@@ -4,6 +4,7 @@ import './globals.css'
 import { Exo } from '@next/font/google'
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
+import FoodiesJourney from './foodiesJourney/page';
 
 const exo = Exo({
   subsets: ["latin"],
@@ -24,10 +25,10 @@ export default async function RootLayout({ children, params: {locale}}) {
 
   return (
     <html lang={locale}>
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+      
+        {/* <head /> will contain the components returned by the nearest parent
+        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head */}
+     
       <head />
       <body className={`${exo.variable} font-exo`}>
         <NextIntlClientProvider locale={locale} messages={messages}>

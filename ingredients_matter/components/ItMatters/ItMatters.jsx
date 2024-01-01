@@ -1,85 +1,63 @@
 'use client'
-import { useRef } from 'react';
+
+import { useState } from 'react';
 import Image from 'next/image';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import artificialAdditives from '../../public/artificial_additives_2.jpg'
-
-
+import artificialAdditives from '../../public/artificial_additives_2.jpg';
+import glyphosateImage from '../../public/glyphosate.png';
+import pesticideImage from '../../public/pesticide.png';
 
 export default function ItMatters() {
 
-  const ef = useRef(null);
+  const [isMobileText, setIsMobileText] = useState(false);
 
-  const { scrollYProgress } = useScroll({
-    target: ef,
-    offset: ["0 1", "1.33 1"],
-  });
-
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const handleMobileText = () => {
+    setIsMobileText(!isMobileText);
+  } 
 
 
   const message = useTranslations('AdditivesPage')
 
   return (
-    <div className='bg-gradient-to-b from-black via-[#009900] to-black'>
-      <motion.div
-        ref={ef} 
-        style={{
-          scale: scaleProgress,
-          opacity: opacityProgress,
-        }}
-        className='relative overflow-visible bg-center flex flex-col items-center'
-      >
-        <section
-          className='w-full m-5 p-11'
-        >
-          <div className='text-white text-7xl flex font-semibold mb-6'>
-            {message('title')}
-          </div>
-          <div className='flex justify-end'>
-            <div className='text-center font-light mb-4 pl-2 text-3xl text-white'>
-                {message('subtitle')}
-            </div>
-          </div>
-        </section>
-      </motion.div>
-      <div className='justify-center flex pb-8 w-full'>
-        <motion.div
-          className='relative flex items-center flex-col md:flex-end md:flex-row'
-        >
+    <main className='bg-gradient-to-b from-black via-[#009900] to-black flex flex-col p-10 md:flex-row'>
+      <div className='flex flex-col justify-center items-center md:w-full'>
           <Image
-            className='pb-10 w-full md:w-1/2 md:mb-0 lg:w-3/4'
-            width="0"
-            height="0"
+            className='rounded-full w-96 h-96 md:rounded-sm md:w-full md:h-auto'
             src={artificialAdditives}
           />
-          <div className='flex font-bold justify-center items-center leading-9 w-1/2 text-2xl text-white text-center md:font-bold md:leading-[3rem] md:text-4xl lg:leading-[3rem] lg:text-4xl lg:w-3/4'>
-            {message('statOne')}
+          <div>
+          <h4 className='text-white py-5'>{message('headingTitle')}</h4>
+          <Link href="/foodiesJourney">
+            <div className='text-white whitespace-pre-line text-4xl'>{message('mainTitle')}</div>
+          </Link>
           </div>
-        </motion.div>
       </div>
-      <div className='justify-center flex pb-8 w-full'>
-        <motion.div
-          className='relative flex items-center flex-col md:flex-end md:flex-row'
-          ref={ef} 
-          style={{
-            scale: scaleProgress,
-            opacity: opacityProgress,
-          }}
-        >
-          <div className='flex font-bold justify-center items-center leading-9 pb-8 w-1/2 text-2xl text-white text-center md:font-bold md:leading-[2rem] md:text-lg md:pr-2 md:pl-2.5'>
-              {message('statTwo')}
-          </div>
-          <div  className='flex font-bold justify-center items-center leading-9 pb-8 w-1/2 text-2xl text-white text-center md:font-bold md:leading-[2rem] md:text-lg md:px-2'>
-            {message('statThree')}
-          </div>
-          <div  className='flex font-bold justify-center items-center leading-9 w-1/2 text-2xl text-white text-center md:font-bold md:leading-[2rem] md:text-lg md:pr-2.5 md:pl-2'>
-            {message('statFour')}
-          </div>
-        </motion.div>
+      <div className='md:ml-5 md:w-full'>
+          <h4 className='py-5 text-white'>{message('findOutMore')}</h4>
+          <article className='flex flex-col justify-center'>
+            <Link href="/findOutMore">
+              <div className='flex flex-col py-5 md:flex-row md:items-center'>
+                <div className='hidden md:flex md:flex-grow'>
+                  <h2 className='text-white text-3xl'>{message('findOutTitle')}</h2>
+                </div>
+                <div className='flex justify-center items-center rounded-sm md:flex-none'>
+                  <Image className='rounded-full w-96 h-96 md:rounded-sm md:w-52 md:h-36' src={glyphosateImage} />
+                </div>
+              </div>
+            </Link>
+            <Link href="/findOutMore/chlorpyrifos">
+              <div className='flex flex-col py-5 md:flex-row md:items-center'>
+                <div className='hidden md:flex md:flex-grow'>
+                  <h2 className='text-white text-3xl'>{message('chlorpyrifosTitle')}</h2>
+                </div>
+                <div className='flex justify-center items-center md:rounded-sm md:flex-none'>
+                  <Image className='rounded-full w-96 h-96 md:w-52 md:h-36' src={pesticideImage} />
+                </div>
+              </div>
+            </Link>
+          </article>
       </div>
-    </div>
+    </main>
   )
 }
