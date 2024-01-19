@@ -1,77 +1,82 @@
 'use client'
-import { useEffect, useRef, useState } from 'react'
-import ImageBlock from './ImageBlock';
+
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import steakImage from '../../public/steak.png';
+import vegetablesImage from '../../public/vegetables.png';
+import fruitsImage from '../../public/fruits.png';
+import breadsImage from '../../public/bread.png';
+import fungusImage from '../../public/Enoki mushrooms.jpg';
+import artificialImage from '../../public/artificial_additives_2.jpg';
+
 
 
 const WholeFoods = () => {
 
-  const [widthSize, setWidthSize] = useState();
-
-  const hasWindow = typeof window !== 'undefined';
-  const width = hasWindow ? window.innerWidth : null;
-
-  const handleResize = () => {
-    console.log('width', width);
-    if (width !== null && width > 720) {
-      setWidthSize(400);
-    } else {
-      setWidthSize(0)
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    handleResize();
-    return () => {window.removeEventListener('resize', handleResize);};
-  }, [widthSize]);
+  const wholeFoodMessage = useTranslations('WholeFoodsPage')
 
   return (
-    <div
-     className='bg-gradient-to-b from-[#1721E6]/100 to-white pb-[40px]'
+    <main
+     className='p-10'
     >
-      <ImageBlock 
-        widthSize={width}
-      />
-    </div>
+      <div className="flex flex-row">
+        <div className="border-2 border-black flex flex-col w-full">
+          <div className="border-4 border-red-500 flex flex-col py-5 md:flex-row md:items-center">
+            <div className='flex justify-center items-center rounded-sm md:flex-none'>
+              <Image className='rounded-full w-96 h-96 md:rounded-sm md:w-52 md:h-36' src={vegetablesImage} />
+            </div>
+            <div className='hidden md:flex md:flex-grow'>
+              <h2 className='text-white text-2xl'>{wholeFoodMessage('vegetableTitle')}</h2>
+            </div>
+          </div>
+          <div className="border-4 border-red-500 flex flex-col py-5 md:flex-row md:items-center">
+            <div className='flex justify-center items-center rounded-sm md:flex-none'>
+              <Image className='rounded-full w-96 h-96 md:rounded-sm md:w-52 md:h-36' src={fruitsImage} />
+            </div>
+            <div className='hidden md:flex md:flex-grow'>
+              <h2 className='text-white text-2xl'>{wholeFoodMessage('fruitTitle')}</h2>
+            </div>
+          </div>
+          <div className="border-4 border-red-500 flex flex-col py-5 md:flex-row md:items-center">
+            <div className='flex justify-center items-center rounded-sm md:flex-none'>
+              <Image className='rounded-full w-96 h-96 md:rounded-sm md:w-52 md:h-36' src={steakImage} />
+            </div>
+            <div className='hidden md:flex md:flex-grow'>
+              <h2 className='text-white text-2xl'>{wholeFoodMessage('meatsTitle')}</h2>
+            </div>
+          </div>
+          <div className="border-4 border-red-500 flex flex-col py-5 md:flex-row md:items-center">
+            <div className='flex justify-center items-center rounded-sm md:flex-none'>
+              <Image className='rounded-full w-96 h-96 md:rounded-sm md:w-52 md:h-36' src={fungusImage} />
+            </div>
+            <div className='hidden md:flex md:flex-grow'>
+              <h2 className='text-white text-2xl'>{wholeFoodMessage('fungiTitle')}</h2>
+            </div>
+          </div>
+          <div className="border-4 border-red-500 flex flex-col py-5 md:flex-row md:items-center">
+            <div className='flex justify-center items-center rounded-sm md:flex-none'>
+              <Image className='rounded-full w-96 h-96 md:rounded-sm md:w-52 md:h-36' src={breadsImage} />
+            </div>
+            <div className='hidden md:flex md:flex-grow'>
+              <h2 className='text-white text-2xl'>{wholeFoodMessage('grainsTitle')}</h2>
+            </div>
+          </div>
+          <div className="border-4 border-red-500 flex flex-col py-5 md:flex-row md:items-center">
+            <div className='flex justify-center items-center rounded-sm md:flex-none'>
+              <Image className='rounded-full w-96 h-96 md:rounded-sm md:w-52 md:h-36' src={artificialImage} />
+            </div>
+            <div className='hidden md:flex md:flex-grow'>
+              <h2 className='text-white text-2xl'>{wholeFoodMessage('artificialTitle')}</h2>
+            </div>
+          </div>
+        </div>
+        <div className="border-2 border-green-500 flex flex-col w-full">
+          yay more food
+        </div>
+      </div>
+
+    </main>
   )
 }
 
 export default WholeFoods
-
-
-{/* <div className='flex flex-col bg-gradient-to-b from-[#1721E6]/100 to-white'>
-<div className='flex flex-col m-[0px 10px 0px 20px] md:flex-row'>
-  <div className='m-2.5 w-auto'>
-    <ImageBlock
-      id='salmon_fillet_small.png'
-    />
-  </div>
-  <div className='m-2.5 w-auto'>
-    <ImageBlock
-      id='veggies.png'
-    />
-  </div>
-  <div className='m-2.5 w-auto'>
-    <ImageBlock
-      id='fruit_bowl.png'
-    />
-  </div>
-  <div className='m-2.5 w-auto'>
-    <ImageBlock
-      id='fresh_bread.png'
-    />
-  </div>
-  <div className='m-2.5 w-auto'>
-    <ImageBlock
-      id='tomahawk_steak.png'
-    />
-  </div>
-</div>
-<div className='flex flex-col m-[0px 10px 0px 20px] md:flex-row'>
-  <div className='leading-9 relative text-center text-6xl'>
-    {messages('bulletPoint1')}
-  </div>
-</div>
-</div>
-)
-} */}

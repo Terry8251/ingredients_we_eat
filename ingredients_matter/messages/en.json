@@ -17,13 +17,14 @@
     "heading": "About",
     "title": "Learn more about us!",
     "title2": "Why we think it matters!",
-    "paragraph": "<p>Welcome to our site, where we strive to provide you with the truth about the foods you eat. We believe<br/> that with the right information, you can make better decisions about your diet and start feeling better in no<br/>time. While nobody is perfect, small changes cand make a big difference in how you feel. I'm confident you<br/>will find information in here that you will need to make positive changes in your life!</p>"
+    "paragraph": "Step into our virtual realm, where we embark on a journey to unravel the mysteries behind the foods you savor! We're not just about facts; we're about arming you with the superpower of knowledge to revolutionize your diet. Picture this: tiny tweaks in your food choices, colossal changes in how you feel. Perfection may be a myth, but the magic lies in those small, powerful changes. Prepare to dive deep because, in this treasure trove of information, you're not just a visitor; you're an explorer. The mission? Uncover the secrets that empower you to craft a healthier, happier life. Whether it's boosting your physical prowess or nurturing your mental well-being, consider this your backstage pass to a wellness extravaganza. Get ready to make waves of positive change—I promise, your journey to a better you starts right here!"
   },
   "WholeFoodsPage": {
-    "bulletPoint1": "Prioritizing whole foods rich in essential nutrients supports overall health",
-    "bulletPoint2": "Essential nutrients contribute to the body's well-being",
-    "bulletPoint3": "Beyond basics, understanding specific benefits of foods is crucial",
-    "bulletPoint4": "Learning about food functions empowers informed eating decisions.",
-    "bulletPoint5": "Improved understanding leads to a healthier lifestyle."
+    "meatsTitle": "Meat News",
+    "vegetableTitle": "Vegetable News",
+    "fruitTitle": "Fruit News",
+    "grainsTitle": "Grain News",
+    "fungiTitle": "Fungus News",
+    "artificialTitle": "Artificial News"
   }
 }
