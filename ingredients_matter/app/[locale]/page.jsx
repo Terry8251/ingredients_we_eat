@@ -6,7 +6,7 @@ import FoodiesJourney from './foodiesJourney/page';
 export default function Home() {
 
   return (
-      <div className='z-[2]'>
+      <div>
         <Hero />
         <ItMatters />
         <WholeFoods />

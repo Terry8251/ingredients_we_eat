@@ -5,26 +5,23 @@
   },
 
   "AdditivesPage": {
-    "headingTitle":"Ready",
+    "buttonText": "Find out more",
+    "headingTitle":"Unlocking a Healthier Lifestyle Through Informed Food Choices",
     "mainTitle": "Unveiling Culinary Mysteries:\nA Thoughtful Foodie's Journey to Health and Flavor!",
-    "findOutMore": "Did You Know?",
     "findOutTitle": "Cultivating Controversy: Unmasking Glyphosate's Secrets in Our Health",
-    "chlorpyrifosTitle": "Turning the Page: EPA's Bold Move to Safeguard Health, or Not...",
-    "subtitle": "My primary focus is to uncover the truth behind various foods and their impact on our health. Our resources are    designed to guide you in making well-informed decisions about what you eat."
-  },
-  "WelcomePage": {
-    "button": "Why we care",
-    "heading": "About",
-    "title": "Learn more about us!",
-    "title2": "Why we think it matters!",
-    "paragraph": "Step into our virtual realm, where we embark on a journey to unravel the mysteries behind the foods you savor! We're not just about facts; we're about arming you with the superpower of knowledge to revolutionize your diet. Picture this: tiny tweaks in your food choices, colossal changes in how you feel. Perfection may be a myth, but the magic lies in those small, powerful changes. Prepare to dive deep because, in this treasure trove of information, you're not just a visitor; you're an explorer. The mission? Uncover the secrets that empower you to craft a healthier, happier life. Whether it's boosting your physical prowess or nurturing your mental well-being, consider this your backstage pass to a wellness extravaganza. Get ready to make waves of positive change—I promise, your journey to a better you starts right here!"
+    "findOutParagraph": "Glyphosate, a widely used herbicide, is under scrutiny for its potential health and environmental impacts, with significant exposure affecting 80% of Americans. Despite its initial perception as safe, concerns about glyphosate's carcinogenicity and environmental harm have sparked debates and regulatory actions. Bayer's decision to pull glyphosate-based herbicides from the U.S. consumer market by 2023 adds to the ongoing saga. Staying informed and advocating for safer alternatives remains crucial in navigating the glyphosate controversy.",
+    "pesticidesOverlay": "Pesticides have significant health impacts, including respiratory issues, neurological disorders, and cancer, with around 220,000 pesticide-related deaths globally each year, according to the WHO. Vulnerable populations, such as agricultural workers and children, face heightened risks due to exposure. Environmentally, pesticides contaminate soil, water, and air, harming ecosystems and wildlife, while also endangering beneficial insects like bees and butterflies. Their persistence in the environment poses long-term ecological risks, including bioaccumulation in food chains.",
+    "subtitle": "My primary focus is to uncover the truth behind various foods and their impact on our health. Our resources are    designed to guide you in making well-informed decisions about what you eat.",
+    "foodRecalls": "Staying up to date on food recalls is essential for ensuring food safety and protecting against potential health risks. By regularly checking official recall announcements from government agencies or subscribing to food recall alerts, individuals can make informed decisions and avoid consuming products that may pose a risk to their health.",
+    "waterSafetyNews": "Drinking contaminated water poses serious health risks, including potential exposure to harmful bacteria, chemicals, and pollutants. It's essential to regularly test your water quality to ensure its safety for consumption and protect the health of yourself and your loved ones.",
+    "paragraph": "In today's grocery landscape, decoding ingredient labels is essential for making informed food choices. By unraveling the mysteries of these labels, we empower ourselves to prioritize wholesome, nourishing options. This journey towards mindful eating not only enhances our well-being but also fosters a deeper connection with the food we consume. Through conscious choices and embracing natural ingredients, we embark on a path towards a healthier, more fulfilling lifestyle",
+    "recallBtn": "Recalls",
+    "waterBtn": "Drink up"
   },
   "WholeFoodsPage": {
-    "meatsTitle": "Meat News",
-    "vegetableTitle": "Vegetable News",
-    "fruitTitle": "Fruit News",
-    "grainsTitle": "Grain News",
-    "fungiTitle": "Fungus News",
-    "artificialTitle": "Artificial News"
+    "wholeFoodsTitle": "Start Homecooking!"
+  },
+  "Footer": {
+    "socialTitle": "Follow Us"
   }
 }

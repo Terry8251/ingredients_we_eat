@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <section className={`${styles.yPaddings} flex flex-col items-center justify-center h-screen bg-fixed bg-center relative`}>
       <Image src={artificialIngredients} alt="artificial ingredients label" fill   />
-      <div className='absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-black via-slate-400/50 to-slate-50' />
+      <div className='absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-black via-blue-400/50 to-blue-100' />
       <motion.div
         variants={staggerContainer}
         initial="hidden"
