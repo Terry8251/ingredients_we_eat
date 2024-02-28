@@ -3,6 +3,8 @@
 
 generator client {
   provider = "prisma-client-js"
+  // previewFeatures = ["jsonProtocol"]
+  binaryTargets = ["native", "linux-arm64-openssl-1.0.x"]
 }
 
 datasource db {
@@ -10,3 +12,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model RedMeat {
+  id       String    @id @default(uuid())
+  name     String
+  type     String?
+  protein  String?
+  carbs    String?
+  sugar    String?
+  fiber    String?
+  fat      String?
+  calories String?
+  origin   String?
+}
